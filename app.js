@@ -1,6 +1,9 @@
-const hamburger_menu= document.querySelector(".hamburger-menu");
-const container= document.querySelector(".container")
+const menuIcon = document.querySelector('.menu');
 
-hamburger_menu.addEventListener("click", () => {
-    container.classList.toggle("active")
-})
+menuIcon.addEventListener("click",function(){
+  if(menuIcon.classList.contains('active')){
+    menuIcon.classList.remove('active');
+  }else{
+    menuIcon.classList.add('active');
+  }
+});

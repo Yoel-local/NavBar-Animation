@@ -1,53 +1,13 @@
 /* Importar fuente de Google */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,300');
-.container2{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    width: auto;
-    height: 70px;
-    background-color: #3FAF82;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700,300");
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: auto;
+  height: 70px;
+  background-color: #3faf82;
 }
-
-/* Animaciones para abrir el menú */
-@keyframes open-line-1 {
-  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  100% { transform: translate3d(0, 10px, 0) rotate(45deg); }
-}
-
-@keyframes open-line-2 {
-  0% { transform: scale(1); opacity: 1; }
-  49% { transform: scale(1); opacity: 1; }
-  51% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(0); opacity: 0; }
-}
-
-@keyframes open-line-3 {
-  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  100% { transform: translate3d(0, -10px, 0) rotate(135deg); }
-}
-/* Animaciones para cerrar el menú */
-@keyframes close-line-1 {
-    0% { transform: translate3d(0, 0, 0) rotate(45deg); }
-    50% { transform: translate3d(0, 0, 0) rotate(0deg); }
-    100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  }
-  
-  @keyframes close-line-2 {
-    0% { transform: scale(0); opacity: 0; }
-    49% { transform: scale(0); opacity: 0; }
-    51% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-  
-  @keyframes close-line-3 {
-    0% { transform: translate3d(0, 0, 0) rotate(-45deg); }
-    50% { transform: translate3d(0, 0, 0) rotate(0deg); }
-    100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  }
-
 
 /* Estilo del marco */
 .frame {
@@ -61,71 +21,144 @@
   border-radius: 2px;
   box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #3FAF82;
+  background: #3faf82;
   color: #333;
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Centrar contenido dentro del marco */
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* Estilo del menú */
-.menu {
-display: flex;
-flex-direction: column;
-align-self: center;
-  border-radius: 50%; /* Hacerlo circular */
-  background-color: #3FAF82; /* Color de fondo del menú */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease;
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 
 }
-
-/* Estilo de las líneas del menú */
-.line1, .line2, .line3 {
-  height: 5px;
-  width: 70px; /* Ancho de las líneas */
-  background-color: white; /* Color de las líneas */
-  border-radius: 5px;
-    margin:5px 0;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-
-}
-
-/* Posicionamiento de las líneas dentro del menú */
 .line1 {
-
-  animation: close-line-1 0.7s forwards;
-}
-
-.line2 {
-
-  margin: 0; /* Sin margen para la línea central */
-  animation: close-line-2 0.7s forwards;
-}
-
-.line3 {
-  bottom: 0%;
-  animation: close-line-3 0.7s forwards;
-}
-
-/* Estilos activos cuando el menú está abierto */
-.active .line1 {
+  height: 10px;
+  width: 80px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
   animation: open-line-1 0.7s forwards;
+  box-shadow: 0 0 10px 1px #000000;
 }
-
-.active .line2 {
+.line2 {
+  
+  height: 10px;
+  width: 80px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
   animation: open-line-2 0.7s forwards;
+  box-shadow: 0 0 10px 1px #000000;
+}
+.line3{
+ 
+  height: 10px;
+  width: 80px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  animation: open-line-3 0.7s forwards;
+  box-shadow: 0 0 10px 1px #000000;
 }
 
+@keyframes open-line-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 22px, 0) rotate(45deg);
+  }
+}
+@keyframes open-line-2 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes open-line-3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, -20px, 0) rotate(-45deg);
+  }
+}
+
+.active .line1 {
+  animation: close-line-1 0.7s;
+}
+.active .line2 {
+  animation: close-line-2 0.7s;
+}
 .active .line3 {
-  animation: open-line-3 0.7s forwards;
+  animation: close-line-3 0.7s;
+}
+@keyframes close-line-1 {
+  0% {
+    transform: translate3d(0, 22px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate();
+  }
+  
+}
+@keyframes close-line-2 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes close-line-3 {
+  0% {
+    transform: translate3d(0, -22px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate();
+  }
 }
